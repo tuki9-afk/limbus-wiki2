@@ -228,3 +228,15 @@ footer {
 #intro {
   transition: 1s;
 }
+#intro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+  transition: 1s;
+}
+
+#intro.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
