@@ -1,83 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limbus Wiki</title>
+  <title>Limbus Company Wiki</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  function fecharIntro() {
-    document.getElementById("intro").classList.add("hidden");
-  }
-
-  setTimeout(() => {
-    document.getElementById("intro").classList.add("hidden");
-  }, 3000);
-</script>
-</body>
 <body>
-  <div id="intro">
-  <div class="intro-box">
+  <header>
     <h1>Limbus Company Wiki</h1>
-    <p>Bem-vindo ao site</p>
-    <button onclick="fecharIntro()">Entrar</button>
-  </div>
-</div>
-<div id="intro">
-  <div class="intro-box">
-    <h1>Limbus Company Wiki</h1>
-    <p>
-      Bem-vindo à sua enciclopédia sobre personagens, lore, poderes e história.
-    </p>
-    <button class="intro-btn" onclick="fecharIntro()">Entrar</button>
-  </div>
-</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="historia.html">História</a>
+      <a href="creditos.html">Créditos</a>
+    </nav>
+  </header>
 
-<header>Limbus Company Wiki</header>
+  <main>
+    <section class="hero">
+      <h2>Bem-vindo à Limbus Company Wiki</h2>
+      <p>
+        Explore a história do jogo, conheça os personagens e mergulhe em uma wiki
+        feita para reunir informações sobre o universo de Limbus Company.
+      </p>
+      <a href="personagens.html" class="btn">Ver Personagens</a>
+    </section>
 
-<nav>
-  <a href="index.html">Início</a>
-  <a href="personagens.html">Personagens</a>
-  <a href="historia.html">História</a>
-  <a href="creditos.html">Créditos</a>
-</nav>
+    <h2 class="section-title">Explorar</h2>
 
-<div class="container">
-  <h1>Bem-vindo</h1>
-  <p>Explore o mundo de Limbus Company.</p>
+    <section class="cards">
+      <div class="card">
+        <h3>Personagens</h3>
+        <p>Veja páginas individuais com informações sobre lore, personalidade, gostos e poderes.</p>
+        <a href="personagens.html" class="btn">Acessar</a>
+      </div>
 
-  <div class="cards">
-    <div class="card">
-      <h2>Personagens</h2>
-      <p>Conheça todos os personagens do jogo.</p>
-      <a href="personagens.html" class="btn">Acessar</a>
-    </div>
+      <div class="card">
+        <h3>História</h3>
+        <p>Leia um resumo mais completo sobre o enredo e o mundo de Limbus Company.</p>
+        <a href="historia.html" class="btn">Acessar</a>
+      </div>
 
-    <div class="card">
-      <h2>História</h2>
-      <p>Conheça a historia completa.</p>
-      <a href="historia.html" class="btn">Acessar</a>
-    </div>
-  </div>
-</div>
+      <div class="card">
+        <h3>Créditos</h3>
+        <p>Veja os créditos do projeto e as informações do site.</p>
+        <a href="creditos.html" class="btn">Acessar</a>
+      </div>
+    </section>
+  </main>
 
-<footer>© 2026 - Limbus Wiki</footer>
-<footer>© 2026 - Limbus Wiki</footer>
-
-<!-- COLOCA AQUI -->
-<script>
-  function fecharIntro() {
-    document.getElementById("intro").classList.add("hidden");
-  }
-
-  setTimeout(() => {
-    document.getElementById("intro").classList.add("hidden");
-  }, 3000);
-</script>
-
-</body>
-</html>
-
+  <footer>
+    © 2026 - Limbus Company Wiki
+  </footer>
 </body>
 </html>
