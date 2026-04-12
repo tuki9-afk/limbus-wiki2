@@ -52,38 +52,77 @@ main {
   padding: 40px 20px;
 }
 
-.hero,
-.text-box,
-.card,
-.info-item {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(212, 167, 255, 0.15);
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(100, 40, 180, 0.12);
-}
-
 .hero {
   text-align: center;
   padding: 60px 20px;
-}
-
-.hero h2,
-.section-title,
-.character-header h2 {
-  color: #e7c8ff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 167, 255, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 0 24px rgba(100, 40, 180, 0.15);
+  margin-bottom: 35px;
 }
 
 .hero h2 {
   font-size: 2.4rem;
+  color: #e7c8ff;
   margin-bottom: 20px;
 }
 
-.hero p,
-.text-box p,
-.card p,
-.character-header p,
-.info-item {
+.hero p {
+  font-size: 1.1rem;
   line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 25px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #ddb8ff;
+  margin: 35px 0 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 167, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(100, 40, 180, 0.12);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 24px rgba(140, 70, 220, 0.2);
+}
+
+.card h3 {
+  color: #e8ccff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.text-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 167, 255, 0.15);
+  border-radius: 16px;
+  padding: 25px;
+  line-height: 1.9;
+  box-shadow: 0 0 20px rgba(100, 40, 180, 0.12);
+}
+
+.text-box p {
+  margin-bottom: 18px;
 }
 
 .btn {
@@ -102,41 +141,6 @@ main {
   box-shadow: 0 0 20px rgba(166, 77, 255, 0.4);
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin: 0 0 25px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  padding: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 24px rgba(140, 70, 220, 0.2);
-}
-
-.card h3 {
-  color: #e8ccff;
-  margin-bottom: 10px;
-}
-
-.text-box {
-  padding: 25px;
-}
-
-.text-box p {
-  margin-bottom: 18px;
-}
-
 .character-header {
   text-align: center;
   margin-bottom: 30px;
@@ -144,7 +148,12 @@ main {
 
 .character-header h2 {
   font-size: 2.2rem;
+  color: #e7c8ff;
   margin-bottom: 10px;
+}
+
+.character-header p {
+  line-height: 1.7;
 }
 
 .info-list {
@@ -153,9 +162,11 @@ main {
 }
 
 .info-item {
+  background: rgba(255, 255, 255, 0.05);
   border-left: 4px solid #a64dff;
   padding: 15px;
   border-radius: 10px;
+  line-height: 1.8;
 }
 
 .info-item strong {
