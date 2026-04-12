@@ -4,59 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Limbus Company Wiki</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #120018, #1d002b, #2a0040);
-      color: #f3eaff;
-      min-height: 100vh;
-    }
-
-    header {
-      background: rgba(10, 0, 20, 0.92);
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    main {
-      padding: 40px;
-      text-align: center;
-    }
-
-    /* GATINHO */
-    #pet {
-      position: fixed;
-      bottom: 20px;
-      left: 0;
-      width: 80px;
-      height: 80px;
-      z-index: 9999;
-      pointer-events: none;
-    }
-
-    #pet img {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -72,48 +20,45 @@
 </header>
 
 <main>
-  <h2>Bem-vindo ao site</h2>
-  <p>Apenas um site feito para mostrar uma wiki de um jogo
-  </p>
+
+  <h2 class="section-title">Bem-vindo</h2>
+
+  <div class="text-box">
+    <p>
+      Este site é uma wiki dedicada ao universo de Limbus Company.
+      Aqui você pode explorar personagens, história e informações do jogo.
+    </p>
+  </div>
+
+  <h2 class="section-title">Explorar</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Personagens</h3>
+      <p>Veja todos os personagens e suas informações detalhadas.</p>
+      <a href="personagens.html" class="btn">Entrar</a>
+    </div>
+
+    <div class="card">
+      <h3>História</h3>
+      <p>Leia sobre o mundo e a narrativa de Limbus Company.</p>
+      <a href="historia.html" class="btn">Entrar</a>
+    </div>
+
+    <div class="card">
+      <h3>Créditos</h3>
+      <p>Informações sobre o projeto e o criador do site.</p>
+      <a href="creditos.html" class="btn">Entrar</a>
+    </div>
+
+  </div>
+
 </main>
 
-<!-- GATINHO -->
-<div id="pet">
-  <img src="https://media.tenor.com/4AiXzf8l4wIAAAAi/chiikawa.gif">
-</div>
-
-<script>
-const pet = document.getElementById("pet");
-
-let x = 0;
-let direction = 1;
-let speed = 2;
-let bob = 0;
-
-function animatePet() {
-  const maxX = window.innerWidth - pet.offsetWidth;
-
-  x += speed * direction;
-  bob += 0.1;
-
-  if (x >= maxX) {
-    direction = -1;
-    pet.style.transform = "scaleX(-1)";
-  }
-
-  if (x <= 0) {
-    direction = 1;
-    pet.style.transform = "scaleX(1)";
-  }
-
-  pet.style.left = x + "px";
-  pet.style.bottom = 20 + Math.sin(bob) * 6 + "px";
-
-  requestAnimationFrame(animatePet);
-}
-
-animatePet();
-</script>
+<footer>
+  © 2026 - Limbus Company Wiki
+</footer>
 
 </body>
 </html>
