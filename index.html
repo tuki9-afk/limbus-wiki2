@@ -7,6 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="intro">
+  <div class="intro-box">
+    <h1>Limbus Company Wiki</h1>
+    <p>Bem-vindo ao site</p>
+    <button onclick="fecharIntro()">Entrar</button>
+  </div>
+</div>
+<div id="intro">
+  <div class="intro-box">
+    <h1>Limbus Company Wiki</h1>
+    <p>
+      Bem-vindo à sua enciclopédia sobre personagens, lore, poderes e história.
+    </p>
+    <button class="intro-btn" onclick="fecharIntro()">Entrar</button>
+  </div>
+</div>
 
 <header>Limbus Company Wiki</header>
 
@@ -37,6 +53,21 @@
 </div>
 
 <footer>© 2026 - Limbus Wiki</footer>
+<footer>© 2026 - Limbus Wiki</footer>
+
+<!-- COLOCA AQUI -->
+<script>
+  function fecharIntro() {
+    document.getElementById("intro").classList.add("hidden");
+  }
+
+  setTimeout(() => {
+    document.getElementById("intro").classList.add("hidden");
+  }, 3000);
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
