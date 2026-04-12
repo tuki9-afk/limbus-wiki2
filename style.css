@@ -221,3 +221,10 @@ footer {
   color: white;
   cursor: pointer;
 }
+#intro.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+#intro {
+  transition: 1s;
+}
