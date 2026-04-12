@@ -4,54 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Limbus Company Wiki</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #120018, #1d002b, #2a0040);
+      color: #f3eaff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(10, 0, 20, 0.92);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* GATINHO */
+    #pet {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    #pet img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>Limbus Company Wiki</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="personagens.html">Personagens</a>
-      <a href="historia.html">História</a>
-      <a href="creditos.html">Créditos</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h2>Bem-vindo à Limbus Company Wiki</h2>
-      <p>
-        Explore a história, os personagens e a lore de Limbus Company em um site
-        com visual violeta inspirado na atmosfera sombria do jogo.
-      </p>
-      <a href="personagens.html" class="btn">Ir para Personagens</a>
-    </section>
+<header>
+  <h1>Limbus Company Wiki</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="personagens.html">Personagens</a>
+    <a href="historia.html">História</a>
+    <a href="creditos.html">Créditos</a>
+  </nav>
+</header>
 
-    <h2 class="section-title">Explorar o site</h2>
+<main>
+  <h2>Bem-vindo ao site</h2>
+  <p>Agora com um gatinho andando na tela 🐱✨</p>
+</main>
 
-    <section class="cards">
-      <div class="card">
-        <h3>História</h3>
-        <p>Veja um resumo do enredo principal e do mundo brutal de Limbus Company.</p>
-        <a href="historia.html" class="btn">Abrir</a>
-      </div>
+<!-- GATINHO -->
+<div id="pet">
+  <img src="https://media.tenor.com/4AiXzf8l4wIAAAAi/chiikawa.gif">
+</div>
 
-      <div class="card">
-        <h3>Personagens</h3>
-        <p>Acesse as páginas individuais dos Sinners e veja informações de cada um.</p>
-        <a href="personagens.html" class="btn">Abrir</a>
-      </div>
+<script>
+const pet = document.getElementById("pet");
 
-      <div class="card">
-        <h3>Créditos</h3>
-        <p>Veja os créditos e a proposta do projeto da sua wiki.</p>
-        <a href="creditos.html" class="btn">Abrir</a>
-      </div>
-    </section>
-  </main>
+let x = 0;
+let direction = 1;
+let speed = 2;
+let bob = 0;
 
-  <footer>
-    © 2026 - Limbus Company Wiki
-  </footer>
+function animatePet() {
+  const maxX = window.innerWidth - pet.offsetWidth;
+
+  x += speed * direction;
+  bob += 0.1;
+
+  if (x >= maxX) {
+    direction = -1;
+    pet.style.transform = "scaleX(-1)";
+  }
+
+  if (x <= 0) {
+    direction = 1;
+    pet.style.transform = "scaleX(1)";
+  }
+
+  pet.style.left = x + "px";
+  pet.style.bottom = 20 + Math.sin(bob) * 6 + "px";
+
+  requestAnimationFrame(animatePet);
+}
+
+animatePet();
+</script>
+
 </body>
 </html>
