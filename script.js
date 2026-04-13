@@ -1,13 +1,14 @@
-const search = document.getElementById("search");
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
 
-if (search) {
-  search.addEventListener("keyup", function () {
-    const filtro = search.value.toLowerCase();
-    const cards = document.querySelectorAll(".card");
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const target = button.getAttribute('data-tab');
 
-    cards.forEach(card => {
-      const texto = card.innerText.toLowerCase();
-      card.style.display = texto.includes(filtro) ? "block" : "none";
-    });
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabPanels.forEach(panel => panel.classList.remove('active'));
+
+    button.classList.add('active');
+    document.getElementById(target).classList.add('active');
   });
-}
+});

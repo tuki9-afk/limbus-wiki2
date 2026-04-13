@@ -1,56 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limbus Company Wiki</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Limbus Company Wiki</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="personagens.html">Personagens</a>
-      <a href="historia.html">História</a>
-      <a href="creditos.html">Créditos</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h2>Bem-vindo à Limbus Company Wiki</h2>
-      <p>
-        Explore a história, os personagens e o universo sombrio de Limbus Company em um site com visual inspirado no clima do jogo.
-      </p>
-      <a href="personagens.html" class="btn">Ver Personagens</a>
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <p class="tag">Uma wiki feita para fãs</p>
+        <h2>Explore o universo de <span>Limbus Company</span></h2>
+        <p>
+          Conheça os 12 Sinners, entenda a história principal, descubra curiosidades
+          do jogo e navegue por uma wiki com identidade visual inspirada no clima sombrio
+          e elegante da obra.
+        </p>
+        <div class="hero-buttons">
+          <a href="historia.html" class="btn primary">Ver História</a>
+          <a href="personagens.html" class="btn secondary">Explorar Personagens</a>
+        </div>
+      </div>
     </section>
 
-    <h2 class="section-title">Explorar</h2>
-
-    <section class="cards">
-      <div class="card">
-        <h3>Personagens</h3>
-        <p>Veja páginas individuais com informações sobre lore, personalidade, gostos e estilo de combate.</p>
-        <a href="personagens.html" class="btn">Acessar</a>
+    <section class="features container">
+      <div class="section-title">
+        <h2>O que você encontra aqui</h2>
+        <p>Uma experiência organizada, bonita e fácil de navegar.</p>
       </div>
 
-      <div class="card">
-        <h3>História</h3>
-        <p>Leia um resumo mais completo sobre o enredo e o mundo de Limbus Company.</p>
-        <a href="historia.html" class="btn">Acessar</a>
-      </div>
+      <div class="cards-grid">
+        <article class="info-card">
+          <h3>História Principal</h3>
+          <p>
+            Uma página dedicada ao enredo, explicando o papel do Dante, dos Sinners,
+            da Limbus Company e da busca pelos Golden Boughs.
+          </p>
+        </article>
 
-      <div class="card">
-        <h3>Créditos</h3>
-        <p>Veja os créditos do projeto, a proposta do site e a mensagem do criador.</p>
-        <a href="creditos.html" class="btn">Acessar</a>
+        <article class="info-card">
+          <h3>12 Personagens</h3>
+          <p>
+            Cada personagem possui sua própria aba com resumo de lore, personalidade,
+            gostos, estilo de combate e observações gerais.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Curiosidades</h3>
+          <p>
+            Informações sobre o jogo, sua criação, o estúdio responsável e alguns fatos
+            interessantes sobre a proposta narrativa e visual da obra.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="highlight-section">
+      <div class="container highlight-box">
+        <div>
+          <h2>Um mundo cruel, elegante e misterioso</h2>
+          <p>
+            Limbus Company se passa em uma versão brutal da Cidade, onde corporações,
+            tecnologia, violência e sofrimento moldam cada canto do mundo. Nesta wiki,
+            a proposta é apresentar esse universo de forma acessível e estilosa.
+          </p>
+        </div>
+        <a href="curiosidades.html" class="btn primary">Ler curiosidades</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 - Limbus Company Wiki
+  <footer class="site-footer">
+    <div class="container">
+      <p>Site fanmade inspirado em Limbus Company.</p>
+    </div>
   </footer>
 </body>
 </html>
